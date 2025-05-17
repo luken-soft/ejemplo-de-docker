@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  mysql:
+    image: mysql:5.7
+    container_name: mysql-app
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: app
+    ports:
+      - "3306:3306"
+
+  nodeapp:
+    build:
+      context: ./backend-node
+      dockerfile: Dockerfile
+    container_name: node-app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mysql
