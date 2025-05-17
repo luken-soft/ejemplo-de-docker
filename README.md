@@ -34,7 +34,7 @@ mi-proyecto/
 1. Clona el repositorio (si aplica)
 ```
 git clone https://github.com/luken-soft/ejemplo-de-docker.git
-cd mi-proyecto
+cd ejemplo-de-docker-main
 ```
 2. Inicia los contenedores
 ```
